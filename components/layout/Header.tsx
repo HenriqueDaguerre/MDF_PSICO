@@ -40,7 +40,7 @@ export function Header() {
             href="#top"
             className="flex items-center gap-2.5 text-ink transition-opacity hover:opacity-70"
           >
-            <Logo className="text-olive-deep" />
+            <Logo />
             <span className="font-display text-lg tracking-tight">
               Mônica Daguerre
             </span>

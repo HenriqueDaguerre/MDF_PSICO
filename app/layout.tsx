@@ -1,22 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import { GrainOverlay } from "@/components/visuals/GrainOverlay";
 import { MotionProvider } from "@/components/providers/MotionProvider";
-import { CRP_PLACEHOLDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
+import { CRP, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["300", "400", "500", "600"],
+// Fontes oficiais da marca (kit de identidade visual): Cailyne para
+// títulos/wordmark, Montserrat (variável) para o corpo do texto.
+const cailyne = localFont({
+  src: "../fonts/Cailyne.ttf",
+  variable: "--font-cailyne",
   display: "swap",
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const montserrat = localFont({
+  src: "../fonts/Montserrat-Variable.ttf",
+  variable: "--font-montserrat",
+  weight: "100 900",
   display: "swap",
 });
 
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#fbf7f0",
+  themeColor: "#fffcec",
   width: "device-width",
   initialScale: 1,
 };
@@ -85,7 +85,7 @@ const jsonLd = {
       addressCountry: "BR",
     },
   },
-  hasCredential: CRP_PLACEHOLDER,
+  hasCredential: CRP,
 };
 
 export default function RootLayout({
@@ -96,7 +96,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}
+      className={`${cailyne.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-canvas text-ink">
         <script

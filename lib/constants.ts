@@ -13,8 +13,7 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
   WHATSAPP_MESSAGE
 )}`;
 
-// Placeholder — preencher com o número de registro no Conselho Regional de Psicologia
-export const CRP_PLACEHOLDER = "CRP XX/XXXXX";
+export const CRP = "CRP 07/28905";
 
 export const SITE_NAME = "Mônica Daguerre — Psicóloga";
 

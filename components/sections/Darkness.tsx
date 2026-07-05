@@ -8,7 +8,7 @@ export function Darkness() {
   return (
     <section
       id="escuridao"
-      className="relative overflow-hidden bg-[#332f27] py-28 md:py-36"
+      className="relative overflow-hidden bg-[#26101f] py-28 md:py-36"
     >
       <OrganicBlob tone="moss" className="left-[-10%] top-[-10%] h-96 w-96" />
       <OrganicBlob

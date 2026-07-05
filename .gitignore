@@ -42,3 +42,7 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Fonte do kit de identidade visual (arquivos de design, não usados pelo site) —
+# os ativos realmente usados ficam em /public/brand e /fonts
+/MÔNICA DAGUERRE

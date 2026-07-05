@@ -1,32 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  /* Superfícies — brancos quentes e beges, nunca clínico/frio */
-  --color-canvas: #fbf7f0;
-  --color-canvas-soft: #f6f0e6;
-  --color-canvas-deep: #efe6d6;
+  /* Superfícies — paleta oficial da marca: off-white quente dominante */
+  --color-canvas: #fffcec;
+  --color-canvas-soft: #f7f0da;
+  --color-canvas-deep: #efe4c9;
   --color-surface: #ffffff;
 
-  /* Texto — marrom quase-preto, nunca preto puro */
-  --color-ink: #2b2620;
-  --color-ink-soft: #55503f;
-  --color-muted: #8a8378;
+  /* Texto — roxo/berinjela da marca (cor de assinatura do logo) */
+  --color-ink: #3e173d;
+  --color-ink-soft: #6b4f68;
+  --color-muted: #8c8178;
 
-  /* Natureza — oliva, musgo, terra, madeira */
-  --color-olive: #7c8560;
-  --color-olive-deep: #5c6446;
-  --color-moss: #454f3a;
-  --color-earth: #a9895f;
-  --color-wood: #c9a876;
+  /* Natureza — oliva oficial + tons derivados */
+  --color-olive: #5a6e52;
+  --color-olive-deep: #435038;
+  --color-moss: #37402f;
+  --color-earth: #bb8e49;
+  --color-wood: #d3ae72;
 
-  /* Luz — dourado discreto, uso mínimo */
-  --color-gold: #c6a664;
-  --color-gold-soft: #e4d3a4;
+  /* Luz — dourado quente (glow/realce) + verde-lima oficial (pop pontual) */
+  --color-gold: #c9a15e;
+  --color-gold-soft: #e8d6a8;
+  --color-lime: #d8e07f;
 
-  --color-border: #e7ddca;
+  --color-border: #e6dcc3;
 
-  --font-display: var(--font-fraunces);
-  --font-sans: var(--font-manrope);
+  --font-display: var(--font-cailyne);
+  --font-sans: var(--font-montserrat);
 
   --ease-organic: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -46,6 +47,7 @@
   --color-wood: var(--color-wood);
   --color-gold: var(--color-gold);
   --color-gold-soft: var(--color-gold-soft);
+  --color-lime: var(--color-lime);
   --color-border: var(--color-border);
 
   --font-display: var(--font-display);

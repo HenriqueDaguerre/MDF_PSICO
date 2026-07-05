@@ -2,7 +2,7 @@ import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { NAV_ITEMS, FOOTER } from "@/content/site";
-import { CRP_PLACEHOLDER, WHATSAPP_LINK } from "@/lib/constants";
+import { CRP, WHATSAPP_LINK } from "@/lib/constants";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -12,14 +12,14 @@ export function Footer() {
       <Container className="flex flex-col gap-10 py-16 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xs">
           <div className="flex items-center gap-2.5 text-ink">
-            <Logo className="text-olive-deep" />
+            <Logo />
             <span className="font-display text-lg">Mônica Daguerre</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-muted">
             {FOOTER.signature}
           </p>
           <p className="mt-4 text-xs uppercase tracking-[0.14em] text-muted">
-            {CRP_PLACEHOLDER}
+            {CRP}
           </p>
         </div>
 

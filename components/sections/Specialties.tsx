@@ -1,7 +1,8 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Container } from "@/components/ui/Container";
+import { InlineCta } from "@/components/ui/InlineCta";
 import { RevealOnScroll, RevealItem } from "@/components/ui/RevealOnScroll";
-import { SPECIALTIES_INTRO } from "@/content/site";
+import { SPECIALTIES_INTRO, INLINE_CTAS } from "@/content/site";
 import { SPECIALTIES } from "@/content/specialties";
 
 export function Specialties() {
@@ -42,6 +43,8 @@ export function Specialties() {
             );
           })}
         </RevealOnScroll>
+
+        <InlineCta text={INLINE_CTAS.specialties} ctaLabel="Falar com a Mônica" />
       </Container>
     </section>
   );

@@ -1,5 +1,6 @@
 import { Logo } from "@/components/layout/Logo";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { NAV_ITEMS, FOOTER } from "@/content/site";
 import { CRP_PLACEHOLDER, WHATSAPP_LINK } from "@/lib/constants";
 
@@ -34,15 +35,12 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className="flex flex-col gap-3 text-sm">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-ink-soft transition-colors hover:text-ink"
-          >
-            Agendar uma conversa
-          </a>
+        <div className="flex flex-col items-start gap-4 text-sm">
+          <Button asChild size="md" variant="primary">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              Agendar uma conversa
+            </a>
+          </Button>
           <span className="text-muted">Porto Alegre, RS</span>
         </div>
       </Container>

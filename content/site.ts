@@ -120,3 +120,15 @@ export const CTA_FINAL = {
 export const FOOTER = {
   signature: "Ciência, ética e acolhimento.",
 };
+
+export const INLINE_CTAS = {
+  about: "Se a história dela ressoou com a sua, talvez seja hora de conversar.",
+  philosophy: "Você não precisa ter certeza de nada para dar o primeiro passo.",
+  specialties:
+    "Não encontrou aqui o que você está sentindo? Toda história tem espaço nesta escuta.",
+  process: "O primeiro passo é só uma mensagem.",
+  faq: {
+    text: "Alguma pergunta não foi respondida aqui?",
+    ctaLabel: "Falar direto no WhatsApp",
+  },
+};

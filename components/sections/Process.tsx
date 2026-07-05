@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Container } from "@/components/ui/Container";
+import { InlineCta } from "@/components/ui/InlineCta";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
-import { PROCESS_INTRO } from "@/content/site";
+import { PROCESS_INTRO, INLINE_CTAS } from "@/content/site";
 import { PROCESS_STEPS, type ProcessStep } from "@/content/process";
 
 export function Process() {
@@ -50,6 +51,8 @@ export function Process() {
             })}
           </ol>
         </div>
+
+        <InlineCta text={INLINE_CTAS.process} />
       </Container>
     </section>
   );

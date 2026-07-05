@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import {
   Accordion,
@@ -6,8 +7,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/Accordion";
-import { FAQ_INTRO } from "@/content/site";
+import { FAQ_INTRO, INLINE_CTAS } from "@/content/site";
 import { FAQ_ITEMS } from "@/content/faq";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export function Faq() {
   return (
@@ -20,6 +22,15 @@ export function Faq() {
           <h2 className="text-balance font-display text-3xl font-medium leading-[1.15] text-ink md:text-4xl">
             {FAQ_INTRO.title}
           </h2>
+
+          <p className="mt-6 text-pretty text-base leading-relaxed text-ink-soft">
+            {INLINE_CTAS.faq.text}
+          </p>
+          <Button asChild size="md" variant="ghost" className="mt-5">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              {INLINE_CTAS.faq.ctaLabel}
+            </a>
+          </Button>
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.15}>

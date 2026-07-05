@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Hero } from "@/components/sections/Hero";
 import { Darkness } from "@/components/sections/Darkness";
 import { About } from "@/components/sections/About";
@@ -28,6 +29,7 @@ export default function Home() {
         <CtaFinal />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }

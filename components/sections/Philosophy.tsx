@@ -1,7 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { RevealOnScroll, RevealItem } from "@/components/ui/RevealOnScroll";
+import { Button } from "@/components/ui/Button";
 import { OrganicBlob } from "@/components/visuals/OrganicBlob";
-import { PHILOSOPHY } from "@/content/site";
+import { PHILOSOPHY, INLINE_CTAS } from "@/content/site";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export function Philosophy() {
   return (
@@ -36,6 +38,17 @@ export function Philosophy() {
           <p className="text-pretty text-base leading-relaxed text-ink-soft md:text-lg">
             {PHILOSOPHY.closing}
           </p>
+        </RevealOnScroll>
+
+        <RevealOnScroll delay={0.4} className="mt-10">
+          <p className="text-pretty font-display text-lg italic text-ink-soft">
+            {INLINE_CTAS.philosophy}
+          </p>
+          <Button asChild size="md" variant="primary" className="mt-6">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              Agendar uma conversa
+            </a>
+          </Button>
         </RevealOnScroll>
       </Container>
     </section>

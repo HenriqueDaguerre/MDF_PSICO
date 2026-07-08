@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/Button";
 import { LightRays } from "@/components/visuals/LightRays";
 import { LightParticles } from "@/components/visuals/LightParticles";
 import { TreeSilhouette } from "@/components/visuals/TreeSilhouette";
+import { PhotoPlaceholder } from "@/components/visuals/PhotoPlaceholder";
 import { HERO } from "@/content/site";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { CRP, WHATSAPP_LINK } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -22,10 +23,10 @@ export function Hero() {
         className="absolute bottom-0 left-1/2 h-40 w-[520px] -translate-x-1/2 text-olive-deep/25 md:h-56 md:w-[720px]"
       />
 
-      <Container className="relative">
-        <div className="max-w-3xl">
+      <Container className="relative grid gap-14 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-center lg:gap-16">
+        <div>
           <RevealOnScroll delay={0.1}>
-            <span className="mb-6 inline-block font-sans text-xs font-semibold uppercase tracking-[0.2em] text-olive-deep">
+            <span className="mb-6 inline-block rounded-full bg-olive/15 px-3.5 py-1.5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-olive-deep">
               {HERO.eyebrow}
             </span>
           </RevealOnScroll>
@@ -34,7 +35,7 @@ export function Hero() {
             as="h1"
             text={HERO.headline}
             delay={0.2}
-            className="text-balance font-display text-4xl font-medium leading-[1.12] text-ink sm:text-5xl md:text-6xl lg:text-[4rem]"
+            className="text-balance font-display text-4xl font-medium leading-[1.12] text-ink sm:text-5xl md:text-6xl lg:text-[3.4rem]"
           />
 
           <RevealOnScroll delay={1.1}>
@@ -55,7 +56,22 @@ export function Hero() {
               </Button>
             </div>
           </RevealOnScroll>
+
+          <RevealOnScroll delay={1.5}>
+            <p className="mt-8 text-xs uppercase tracking-[0.14em] text-muted">
+              Mônica Daguerre · Psicóloga · {CRP}
+            </p>
+          </RevealOnScroll>
         </div>
+
+        <RevealOnScroll delay={0.3}>
+          <PhotoPlaceholder
+            label={HERO.photoLabel}
+            caption={HERO.photoCaption}
+            tone="olive"
+            className="aspect-[4/5] w-full"
+          />
+        </RevealOnScroll>
       </Container>
 
       <RevealOnScroll

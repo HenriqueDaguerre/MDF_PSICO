@@ -13,6 +13,8 @@ export const HERO = {
     "Existe um espaço silencioso para compreender o que dói — com tempo, ética e presença real, até que o caminho volte a fazer sentido.",
   ctaPrimary: "Agendar uma conversa",
   ctaSecondary: "Conhecer a Mônica",
+  photoLabel: "Mônica Daguerre, em luz natural",
+  photoCaption: "Fotografia a ser adicionada",
 };
 
 export const DARKNESS = {
@@ -39,6 +41,8 @@ export const ABOUT = {
 
 export const PHILOSOPHY = {
   eyebrow: "Filosofia de atendimento",
+  photoLabel: "Mônica Daguerre, em momento de escuta",
+  photoCaption: "Fotografia a ser adicionada",
   title: "Cada história tem o seu próprio tempo.",
   statements: [
     "Cada pessoa carrega uma história única.",
@@ -66,6 +70,8 @@ export const PROCESS_INTRO = {
 export const DIFFERENTIALS_INTRO = {
   eyebrow: "Por que este espaço é diferente",
   title: "Um cuidado construído com ciência e com presença.",
+  photoLabel: "Ambiente do consultório, em luz natural e madeira",
+  photoCaption: "Fotografia a ser adicionada",
 };
 
 export const DIFFERENTIALS = [

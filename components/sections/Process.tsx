@@ -3,15 +3,31 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Container } from "@/components/ui/Container";
 import { InlineCta } from "@/components/ui/InlineCta";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
+import { OrganicBlob } from "@/components/visuals/OrganicBlob";
 import { PROCESS_INTRO, INLINE_CTAS } from "@/content/site";
 import { PROCESS_STEPS, type ProcessStep } from "@/content/process";
 
+const NODE_TONES = [
+  "bg-olive text-canvas",
+  "bg-earth text-canvas",
+  "bg-ink text-canvas",
+  "bg-lime text-ink",
+  "bg-olive-deep text-canvas",
+] as const;
+
 export function Process() {
   return (
-    <section id="processo" className="relative bg-canvas-soft py-28 md:py-36">
-      <Container>
+    <section id="processo" className="relative overflow-hidden bg-canvas py-28 md:py-36">
+      <OrganicBlob
+        tone="earth"
+        opacity="soft"
+        className="left-1/2 top-[-10%] h-[28rem] w-[28rem] -translate-x-1/2"
+      />
+
+      <Container className="relative">
         <SectionHeading
           eyebrow={PROCESS_INTRO.eyebrow}
+          eyebrowTone="olive"
           title={PROCESS_INTRO.title}
           description={PROCESS_INTRO.description}
           align="center"
@@ -22,7 +38,7 @@ export function Process() {
           <div className="absolute left-4 top-0 h-full w-px bg-border md:left-1/2 md:-translate-x-1/2">
             <RevealOnScroll
               variant="lineGrow"
-              className="h-full w-px origin-top bg-gradient-to-b from-gold via-olive-deep to-transparent"
+              className="h-full w-px origin-top bg-gradient-to-b from-olive via-ink to-transparent"
             />
           </div>
 
@@ -34,7 +50,12 @@ export function Process() {
                   key={step.number}
                   className="relative grid grid-cols-[2rem_1fr] items-center gap-6 md:grid-cols-[1fr_2rem_1fr] md:gap-10"
                 >
-                  <RevealOnScroll className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/60 bg-canvas font-display text-xs text-olive-deep md:col-start-2 md:row-start-1">
+                  <RevealOnScroll
+                    className={cn(
+                      "relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-xs shadow-[0_8px_20px_-8px_rgba(62,23,61,0.45)] md:col-start-2 md:row-start-1",
+                      NODE_TONES[i % NODE_TONES.length]
+                    )}
+                  >
                     {step.number}
                   </RevealOnScroll>
 

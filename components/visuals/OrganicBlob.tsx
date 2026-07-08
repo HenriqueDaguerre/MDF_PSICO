@@ -1,16 +1,19 @@
 import { cn } from "@/lib/utils";
 
 const TONES = {
-  olive: ["#7c8560", "#5c6446"],
-  earth: ["#a9895f", "#8a6c46"],
-  gold: ["#e4d3a4", "#c6a664"],
-  moss: ["#6b7a5a", "#454f3a"],
+  olive: ["#5a6e52", "#37402f"],
+  earth: ["#d3ae72", "#bb8e49"],
+  gold: ["#e8d6a8", "#c9a15e"],
+  moss: ["#5a6e52", "#37402f"],
+  purple: ["#8a5f87", "#3e173d"],
+  lime: ["#eaf0b8", "#d8e07f"],
 } as const;
 
 interface OrganicBlobProps {
   className?: string;
   tone?: keyof typeof TONES;
   animate?: boolean;
+  opacity?: "soft" | "strong";
 }
 
 /**
@@ -21,6 +24,7 @@ export function OrganicBlob({
   className,
   tone = "olive",
   animate = true,
+  opacity = "strong",
 }: OrganicBlobProps) {
   const [from, to] = TONES[tone];
   const id = `blob-${tone}`;
@@ -30,7 +34,8 @@ export function OrganicBlob({
       aria-hidden="true"
       viewBox="0 0 200 200"
       className={cn(
-        "pointer-events-none absolute opacity-[0.16] blur-2xl",
+        "pointer-events-none absolute blur-xl",
+        opacity === "strong" ? "opacity-[0.4]" : "opacity-[0.22]",
         animate && "animate-drift",
         className
       )}

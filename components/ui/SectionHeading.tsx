@@ -1,8 +1,16 @@
 import { cn } from "@/lib/utils";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
+const EYEBROW_TONES = {
+  olive: "bg-olive/15 text-olive-deep",
+  caramel: "bg-earth/20 text-earth",
+  purple: "bg-ink/10 text-ink",
+  lime: "bg-lime/45 text-olive-deep",
+} as const;
+
 interface SectionHeadingProps {
   eyebrow?: string;
+  eyebrowTone?: keyof typeof EYEBROW_TONES;
   title: React.ReactNode;
   description?: React.ReactNode;
   align?: "left" | "center";
@@ -12,6 +20,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   eyebrow,
+  eyebrowTone = "olive",
   title,
   description,
   align = "left",
@@ -27,7 +36,12 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <span className="mb-4 inline-block font-sans text-xs font-semibold uppercase tracking-[0.2em] text-olive-deep">
+        <span
+          className={cn(
+            "mb-4 inline-block rounded-full px-3.5 py-1.5 font-sans text-xs font-semibold uppercase tracking-[0.2em]",
+            EYEBROW_TONES[eyebrowTone]
+          )}
+        >
           {eyebrow}
         </span>
       ) : null}

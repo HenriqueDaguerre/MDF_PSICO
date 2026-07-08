@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Darkness } from "@/components/sections/Darkness";
 import { About } from "@/components/sections/About";
 import { Philosophy } from "@/components/sections/Philosophy";
+import { Benefits } from "@/components/sections/Benefits";
 import { Specialties } from "@/components/sections/Specialties";
 import { Process } from "@/components/sections/Process";
 import { Differentials } from "@/components/sections/Differentials";
@@ -18,9 +19,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Darkness />
         <About />
+        <Darkness />
         <Philosophy />
+        <Benefits />
         <Specialties />
         <Process />
         <Differentials />

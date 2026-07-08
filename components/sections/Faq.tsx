@@ -13,10 +13,10 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 
 export function Faq() {
   return (
-    <section id="faq" className="relative bg-canvas py-28 md:py-36">
+    <section id="faq" className="relative bg-canvas-soft py-28 md:py-36">
       <Container className="grid gap-12 lg:grid-cols-[minmax(0,340px)_1fr] lg:gap-20">
         <RevealOnScroll className="lg:sticky lg:top-32 lg:self-start">
-          <span className="mb-4 inline-block font-sans text-xs font-semibold uppercase tracking-[0.2em] text-olive-deep">
+          <span className="mb-4 inline-block rounded-full bg-earth/20 px-3.5 py-1.5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-earth">
             {FAQ_INTRO.eyebrow}
           </span>
           <h2 className="text-balance font-display text-3xl font-medium leading-[1.15] text-ink md:text-4xl">

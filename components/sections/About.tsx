@@ -4,11 +4,17 @@ import { InlineCta } from "@/components/ui/InlineCta";
 import { RevealOnScroll, RevealItem } from "@/components/ui/RevealOnScroll";
 import { PhotoPlaceholder } from "@/components/visuals/PhotoPlaceholder";
 import { TreeSilhouette } from "@/components/visuals/TreeSilhouette";
+import { OrganicBlob } from "@/components/visuals/OrganicBlob";
 import { ABOUT, INLINE_CTAS } from "@/content/site";
 
 export function About() {
   return (
-    <section id="sobre" className="relative overflow-hidden bg-canvas py-28 md:py-36">
+    <section id="sobre" className="relative overflow-hidden bg-canvas-soft py-28 md:py-36">
+      <OrganicBlob
+        tone="olive"
+        opacity="soft"
+        className="left-[-10%] bottom-[-10%] h-96 w-96"
+      />
       <TreeSilhouette
         variant="canopy"
         className="absolute -top-4 right-0 h-56 w-72 text-olive/20 md:h-72 md:w-96"
@@ -19,6 +25,7 @@ export function About() {
           <div>
             <SectionHeading
               eyebrow={ABOUT.eyebrow}
+              eyebrowTone="olive"
               title={ABOUT.title}
               className="max-w-xl"
             />

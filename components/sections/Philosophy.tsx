@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { RevealOnScroll, RevealItem } from "@/components/ui/RevealOnScroll";
 import { Button } from "@/components/ui/Button";
 import { OrganicBlob } from "@/components/visuals/OrganicBlob";
+import { PhotoPlaceholder } from "@/components/visuals/PhotoPlaceholder";
 import { PHILOSOPHY, INLINE_CTAS } from "@/content/site";
 import { WHATSAPP_LINK } from "@/lib/constants";
 
@@ -14,8 +15,17 @@ export function Philosophy() {
       <OrganicBlob tone="gold" className="left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2" />
 
       <Container className="relative mx-auto max-w-3xl text-center">
+        <RevealOnScroll className="mb-10 flex justify-center">
+          <PhotoPlaceholder
+            label={PHILOSOPHY.photoLabel}
+            caption={PHILOSOPHY.photoCaption}
+            tone="olive"
+            className="aspect-square w-48 rounded-full md:w-56"
+          />
+        </RevealOnScroll>
+
         <RevealOnScroll>
-          <span className="mb-4 inline-block font-sans text-xs font-semibold uppercase tracking-[0.2em] text-olive-deep">
+          <span className="mb-4 inline-block rounded-full bg-ink/10 px-3.5 py-1.5 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ink">
             {PHILOSOPHY.eyebrow}
           </span>
           <h2 className="text-balance font-display text-3xl font-medium leading-[1.15] text-ink md:text-4xl lg:text-[2.75rem]">

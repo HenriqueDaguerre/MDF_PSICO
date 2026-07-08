@@ -16,8 +16,8 @@ export function LightRays({
   intensity = "soft",
 }: LightRaysProps) {
   const color = tone === "gold" ? "var(--color-gold-soft)" : "var(--color-olive)";
-  const alpha = intensity === "strong" ? "33" : "1c";
-  const alphaSoft = intensity === "strong" ? "22" : "10";
+  const alpha = intensity === "strong" ? "4d" : "2e";
+  const alphaSoft = intensity === "strong" ? "33" : "1e";
 
   return (
     <div
